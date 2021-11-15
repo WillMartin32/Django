@@ -1,0 +1,33 @@
+Get request is when the webpge is initily loaded. It is getting the informaition from the database.
+post request sends info to databse to update database.
+Get request goes from webserver to webpage.
+post request goes from webpage to webserver.
+
+pip install -r requirements.txt (installs all things in text file)
+pip freeze > requirements.txt (Allows you to remove intalls for sending to other people)
+
+
+-Started project with this code.
+django-admin startproject learning_log . (Need period and space befor it otherwise it will not be aligned correct in folder)
+
+-Then ran this code next.
+py manage.py migrate
+
+-This code let us run server to see if it was working. Have to click link after it says Starting development server at. 
+-Ctrl C stops server running.
+-If usinf debugger for Django just have to use play and stop buttons.
+py manage.py runserver (Is a server address that is a port on your computer. Can't access it on other computors until we use (hroku?))
+
+-Create a folder called MainApp and allows.
+-Have to add MainApp name in learning log settings.py installed apps.
+py manage.py startapp MainApp
+
+-Allows you to save changes made to main part.
+py manage.py makemigrations
+
+-Next actually make migrate to confirm change.
+py manage.py migrate
+
+-creates a superuser.
+-username is admin and password is pin #
+py manage.py createsuperuser
