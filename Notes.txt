@@ -31,3 +31,5 @@ py manage.py migrate
 -creates a superuser.
 -username is admin and password is pin #
 py manage.py createsuperuser
+
+dbsqllite db browser
