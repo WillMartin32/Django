@@ -9,6 +9,9 @@
     <li>
         <p>{{e.text |linebreaks}}</p>
         <p>{{e.date_added |date:'M d, Y H:i'}}</p>
+        <p>
+            <a href="{% url 'MainApp:edit_entry' e.id %}">Edit entry</a>
+        </p>
     </li>
     {% empty %}
     <li> There are no entries for this topic yet.</li>
@@ -18,5 +21,6 @@
 <p>
     <a href="{% url 'MainApp:new_entry' topic.id %}">Add a new entry</a>
 </p>
+
 
 {% endblock content %}
