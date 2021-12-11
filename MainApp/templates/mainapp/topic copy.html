@@ -10,16 +10,15 @@
 
 <ul>
     {% for e in entries %}
-    <div class="card mb-3">
-        <h4 class="card-header">
-            <small><a href="{% url 'MainApp:edit_entry' e.id %}">Edit entry</a></small>
-    </h4>
-    <div class="card-body">
-        {{e.text |linebreaks}}
-        {{e.date_added |date:'M d, Y H:i'}}
-        </div>
+    <li>
+        <p>{{e.text |linebreaks}}</p>
+        <p>{{e.date_added |date:'M d, Y H:i'}}</p>
+        <p>
+            <a href="{% url 'MainApp:edit_entry' e.id %}">Edit entry</a>
+        </p>
+    </li>
     {% empty %}
-    <p> There are no entries for this topic yet.</p>
+    <li> There are no entries for this topic yet.</li>
     {% endfor %}
 </ul>
 
