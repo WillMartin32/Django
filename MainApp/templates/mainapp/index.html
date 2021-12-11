@@ -1,10 +1,15 @@
 {% extends "MainApp/base.html" %}
 
-{% block content %}
+{% block page_header %}
+    <div class="jumbotron">
+        <h1 class="display-3">Welcome to learning_log!</h1>
 
-<p>
-    Learning Log helps you to keep track of your
-    learning, for any topic you're learning about.
-</p>
+        <p class="lead">Learning Log helps you to keep track of your
+            learning, for any topic you're learning about.
+            </p>
 
-{% endblock content %}
+        <a class="btn btn-lg btn-primary" href="{% url 'MainApp:topics' %}"
+            role="button">Topics &raquo;</a>
+    </div>
+
+{% endblock page_header %}
