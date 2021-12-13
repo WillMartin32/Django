@@ -24,7 +24,7 @@ def topic(request, topic_id):
     if topic.owner != request.user:
         raise Http404
 
-    entries = topic.entry_set.all()
+    entries = topic.entry_set.order_by('-date_added')
 
     context = {'topic':topic, 'entries':entries}
 
